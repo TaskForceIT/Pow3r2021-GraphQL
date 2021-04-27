@@ -1,0 +1,112 @@
+{
+  "routes": [
+    {
+      "name": "Get Artikel",
+      "enableCors": true,
+      "method": "get",
+      "inputs": [],
+      "path": "/Artikel",
+      "summary": "Get Artikel",
+      "tag": "get Artikel",
+      "subcategory": "",
+      "steps": [
+        {
+          "text": "Get records",
+          "OP": true,
+          "answers": {
+            "plugin": "Database:get-records",
+            "tables": "P3APR2021.ARTIKEL",
+            "columns": "id,name,groesse,warengrp",
+            "criteria": "",
+            "add_order_by": false,
+            "limit": "",
+            "skip": "",
+            "destination": "API output",
+            "api_output": "artikel"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Get Kunde",
+      "enableCors": true,
+      "summary": "Get Kunde",
+      "tag": "get Kunde",
+      "method": "get",
+      "path": "/Kunde",
+      "inputs": [],
+      "subcategory": "",
+      "steps": [
+        {
+          "text": "Get records",
+          "OP": true,
+          "answers": {
+            "plugin": "Database:get-records",
+            "tables": "P3APR2021.KUNDE",
+            "columns": "id,vname,nname,email",
+            "criteria": "",
+            "add_order_by": false,
+            "limit": "",
+            "skip": "",
+            "destination": "API output",
+            "api_output": "kunde"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Get Warengrp",
+      "enableCors": true,
+      "summary": "Get Warengrp",
+      "method": "get",
+      "path": "/Warengrp",
+      "inputs": [],
+      "tag": "get Warengruppe",
+      "subcategory": "",
+      "steps": [
+        {
+          "text": "Get records",
+          "OP": true,
+          "answers": {
+            "plugin": "Database:get-records",
+            "tables": "P3APR2021.WARENGRP",
+            "columns": "id,name",
+            "criteria": "",
+            "add_order_by": false,
+            "limit": "",
+            "skip": "",
+            "destination": "API output",
+            "api_output": "warengrp"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Get Kauf",
+      "enableCors": true,
+      "summary": "Get Kauf",
+      "method": "get",
+      "path": "/Kauf",
+      "inputs": [],
+      "tag": "get Kauf",
+      "subcategory": "",
+      "steps": [
+        {
+          "text": "Get records",
+          "OP": true,
+          "answers": {
+            "plugin": "Database:get-records",
+            "tables": "P3APR2021.KAUF",
+            "columns": "id,kunde,artikel,anzahl",
+            "criteria": "",
+            "add_order_by": false,
+            "limit": "",
+            "skip": "",
+            "destination": "API output",
+            "api_output": "kauf"
+          }
+        }
+      ]
+    }
+  ]
+}

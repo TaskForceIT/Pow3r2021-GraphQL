@@ -1,0 +1,1 @@
+Die zusätzlichen Code-Zeilen aus start-zusatz müssen in die start.js eingefügt werden, damit die paths korrekt hinzugefügt werden
